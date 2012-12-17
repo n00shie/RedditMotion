@@ -13,3 +13,4 @@ nbproject
 .eprj
 *.a
 .dat*
+build-iPhoneSimulator/

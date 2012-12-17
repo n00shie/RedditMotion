@@ -1,0 +1,704 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='IIViewDeckCenterHiddenNotUserInteractive' value='1'/>
+<enum name='IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose' value='2'/>
+<enum name='IIViewDeckCenterHiddenNotUserInteractiveWithTapToCloseBouncing' value='3'/>
+<enum name='IIViewDeckCenterHiddenUserInteractive' value='0'/>
+<enum name='IIViewDeckFullViewPanning' value='1'/>
+<enum name='IIViewDeckNavigationBarPanning' value='2'/>
+<enum name='IIViewDeckNavigationControllerContained' value='0'/>
+<enum name='IIViewDeckNavigationControllerIntegrated' value='1'/>
+<enum name='IIViewDeckNoPanning' value='0'/>
+<enum name='IIViewDeckPanningViewPanning' value='3'/>
+<enum name='IIViewDeckRotationKeepsLedgeSizes' value='0'/>
+<enum name='IIViewDeckRotationKeepsViewSizes' value='1'/>
+<class name='IIViewDeckController'>
+<method selector='automaticallyUpdateTabBarItems'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceLeftView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceLeftViewToDistance:duration:callDelegate:completion:'>
+<arg index='0' declared_type='CGFloat' name='distance' type='f'/>
+<arg index='1' declared_type='NSTimeInterval' name='duration' type='d'/>
+<arg index='2' declared_type='BOOL' name='callDelegate' type='B'/>
+<arg index='3' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceLeftViewToDistance:duration:numberOfBounces:dampingFactor:callDelegate:completion:'>
+<arg index='0' declared_type='CGFloat' name='distance' type='f'/>
+<arg index='1' declared_type='NSTimeInterval' name='duration' type='d'/>
+<arg index='2' declared_type='CGFloat' name='numberOfBounces' type='f'/>
+<arg index='3' declared_type='CGFloat' name='zeta' type='f'/>
+<arg index='4' declared_type='BOOL' name='callDelegate' type='B'/>
+<arg index='5' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceLeftViewWithCompletion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceRightView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceRightViewToDistance:duration:callDelegate:completion:'>
+<arg index='0' declared_type='CGFloat' name='distance' type='f'/>
+<arg index='1' declared_type='NSTimeInterval' name='duration' type='d'/>
+<arg index='2' declared_type='BOOL' name='callDelegate' type='B'/>
+<arg index='3' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceRightViewToDistance:duration:numberOfBounces:dampingFactor:callDelegate:completion:'>
+<arg index='0' declared_type='CGFloat' name='distance' type='f'/>
+<arg index='1' declared_type='NSTimeInterval' name='duration' type='d'/>
+<arg index='2' declared_type='CGFloat' name='numberOfBounces' type='f'/>
+<arg index='3' declared_type='CGFloat' name='zeta' type='f'/>
+<arg index='4' declared_type='BOOL' name='callDelegate' type='B'/>
+<arg index='5' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bounceRightViewWithCompletion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='centerController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='centerhiddenInteractivity'>
+<retval declared_type='IIViewDeckCenterHiddenInteractivity' type='i'/>
+</method>
+<method selector='closeLeftView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeLeftViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeLeftViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='void (^)(IIViewDeckController *)' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeLeftViewBouncing:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeLeftViewBouncing:completion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeRightView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeRightViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeRightViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeRightViewBouncing:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='closeRightViewBouncing:completion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='controllers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='elastic'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithCenterViewController:'>
+<arg index='0' declared_type='UIViewController*' name='centerController' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCenterViewController:leftViewController:'>
+<arg index='0' declared_type='UIViewController*' name='centerController' type='@'/>
+<arg index='1' declared_type='UIViewController*' name='leftController' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCenterViewController:leftViewController:rightViewController:'>
+<arg index='0' declared_type='UIViewController*' name='centerController' type='@'/>
+<arg index='1' declared_type='UIViewController*' name='leftController' type='@'/>
+<arg index='2' declared_type='UIViewController*' name='rightController' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCenterViewController:rightViewController:'>
+<arg index='0' declared_type='UIViewController*' name='centerController' type='@'/>
+<arg index='1' declared_type='UIViewController*' name='rightController' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='leftController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='leftControllerIsClosed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='leftControllerIsOpen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='leftLedge'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='maxLedge'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='navigationControllerBehavior'>
+<retval declared_type='IIViewDeckNavigationControllerBehavior' type='i'/>
+</method>
+<method selector='openLeftView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openLeftViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openLeftViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openLeftViewBouncing:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openLeftViewBouncing:completion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openRightView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openRightViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openRightViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openRightViewBouncing:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='openRightViewBouncing:completion:'>
+<arg index='0' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='bounced' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='panningGestureDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='panningMode'>
+<retval declared_type='IIViewDeckPanningMode' type='i'/>
+</method>
+<method selector='panningView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='resizesCenterView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rightController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='rightControllerIsClosed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rightControllerIsOpen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rightLedge'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='rightViewPushViewControllerOverCenterController:'>
+<arg index='0' declared_type='UIViewController*' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='rotationBehavior'>
+<retval declared_type='IIViewDeckRotationBehavior' type='i'/>
+</method>
+<method selector='setAutomaticallyUpdateTabBarItems:'>
+<arg index='0' declared_type='BOOL' name='automaticallyUpdateTabBarItems' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenterController:'>
+<arg index='0' declared_type='UIViewController*' name='centerController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenterhiddenInteractivity:'>
+<arg index='0' declared_type='IIViewDeckCenterHiddenInteractivity' name='centerhiddenInteractivity' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg index='0' declared_type='id' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setElastic:'>
+<arg index='0' declared_type='BOOL' name='elastic' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' declared_type='BOOL' name='enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeftController:'>
+<arg index='0' declared_type='UIViewController*' name='leftController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeftLedge:'>
+<arg index='0' declared_type='CGFloat' name='leftLedge' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeftLedge:completion:'>
+<arg index='0' declared_type='CGFloat' name='rightLedge' type='f'/>
+<arg index='1' declared_type='void (^)(BOOL)' function_pointer='true' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxLedge:'>
+<arg index='0' declared_type='CGFloat' name='maxLedge' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNavigationControllerBehavior:'>
+<arg index='0' declared_type='IIViewDeckNavigationControllerBehavior' name='navigationControllerBehavior' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPanningGestureDelegate:'>
+<arg index='0' declared_type='id' name='panningGestureDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPanningMode:'>
+<arg index='0' declared_type='IIViewDeckPanningMode' name='panningMode' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPanningView:'>
+<arg index='0' declared_type='UIView*' name='panningView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResizesCenterView:'>
+<arg index='0' declared_type='BOOL' name='resizesCenterView' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRightController:'>
+<arg index='0' declared_type='UIViewController*' name='rightController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRightLedge:'>
+<arg index='0' declared_type='CGFloat' name='rightLedge' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRightLedge:completion:'>
+<arg index='0' declared_type='CGFloat' name='rightLedge' type='f'/>
+<arg index='1' declared_type='void (^)(BOOL)' function_pointer='true' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRotationBehavior:'>
+<arg index='0' declared_type='IIViewDeckRotationBehavior' name='rotationBehavior' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showCenterView'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showCenterView:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showCenterView:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='slidingController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='statusBarHeight'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='toggleLeftView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='toggleLeftViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='toggleLeftViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='toggleRightView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='toggleRightViewAnimated:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='toggleRightViewAnimated:completion:'>
+<arg index='0' declared_type='BOOL' name='animated' type='B'/>
+<arg index='1' declared_type='IIViewDeckControllerBlock' function_pointer='true' name='completed' type='@?'>
+<arg declared_type='IIViewDeckController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='viewDeckController:applyShadow:withBounds:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CALayer*' name='shadowLayer' type='@'/>
+<arg index='2' declared_type='CGRect' name='rect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:didBounceWithClosingController:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='UIViewController*' name='openController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:didPanToOffset:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CGFloat' name='offset' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:slideOffsetChanged:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CGFloat' name='offset' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidBounceLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidBounceRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidCloseLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidCloseRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidOpenLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidOpenRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidShowCenterView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerWillBounceLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillBounceRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillCloseLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillCloseRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillOpenLeftView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillOpenRightView:animated:'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='UIViewController'>
+<method selector='viewDeckController'>
+<retval declared_type='IIViewDeckController*' type='@'/>
+</method>
+<method selector='wrapController'>
+<retval declared_type='WrapController*' type='@'/>
+</method>
+</class>
+<class name='WrapController'>
+<method selector='initWithViewController:'>
+<arg index='0' declared_type='UIViewController*' name='controller' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='onViewDidAppear'>
+<retval declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='onViewDidDisappear'>
+<retval declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='onViewDidLoad'>
+<retval declared_type='void (^)(WrapController *)' function_pointer='true' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='onViewWillAppear'>
+<retval declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='onViewWillDisappear'>
+<retval declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setOnViewDidAppear:'>
+<arg index='0' declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' name='onViewDidAppear' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnViewDidDisappear:'>
+<arg index='0' declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' name='onViewDidDisappear' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnViewDidLoad:'>
+<arg index='0' declared_type='void (^)(WrapController *)' function_pointer='true' name='onViewDidLoad' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnViewWillAppear:'>
+<arg index='0' declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' name='onViewWillAppear' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnViewWillDisappear:'>
+<arg index='0' declared_type='void (^)(WrapController *, BOOL)' function_pointer='true' name='onViewWillDisappear' type='@?'>
+<arg declared_type='WrapController*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='wrappedController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+</class>
+<informal_protocol name='IIViewDeckControllerDelegate'>
+<method selector='viewDeckController:applyShadow:withBounds:' type='v32@0:4@8@12{CGRect={CGPoint=ff}{CGSize=ff}}16'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CALayer*' name='shadowLayer' type='@'/>
+<arg index='2' declared_type='CGRect' name='rect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:didBounceWithClosingController:' type='v16@0:4@8@12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='UIViewController*' name='openController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:didPanToOffset:' type='v16@0:4@8f12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CGFloat' name='offset' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckController:slideOffsetChanged:' type='v16@0:4@8f12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='CGFloat' name='offset' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidBounceLeftView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidBounceRightView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidCloseLeftView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidCloseRightView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidOpenLeftView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidOpenRightView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerDidShowCenterView:animated:' type='v16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDeckControllerWillBounceLeftView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillBounceRightView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillCloseLeftView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillCloseRightView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillOpenLeftView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDeckControllerWillOpenRightView:animated:' type='B16@0:4@8B12'>
+<arg index='0' declared_type='IIViewDeckController*' name='viewDeckController' type='@'/>
+<arg index='1' declared_type='BOOL' name='animated' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

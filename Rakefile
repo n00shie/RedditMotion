@@ -11,4 +11,8 @@ Motion::Project::App.setup do |app|
   app.version = "0.1"
 
   app.vendor_project('vendor/ViewDeck', :static)
+
+  app.pods do
+    pod 'AFNetworking'
+  end
 end

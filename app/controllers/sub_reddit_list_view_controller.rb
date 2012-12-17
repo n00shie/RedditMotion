@@ -1,0 +1,2 @@
+class SubRedditListViewController < UITableViewController
+end
